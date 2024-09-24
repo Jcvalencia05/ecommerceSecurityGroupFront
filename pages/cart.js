@@ -1,11 +1,11 @@
-import Button from "@/components/Button";
-import { CartContext } from "@/components/CartContext";
 import Header from "@/components/Header";
-import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
+import Center from "@/components/Center";
+import Button from "@/components/Button";
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "@/components/CartContext";
 import axios from "axios";
 import Table from "@/components/Table";
-import Center from "@/components/Center";
 import Input from "@/components/Input";
 
 const ColumnsWrapper = styled.div`
