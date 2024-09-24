@@ -6,7 +6,7 @@ import { CartContext } from "@/components/CartContext";
 import BarsIcon from "@/components/icons/Bars";
 
 const StyledHeader = styled.header`
-    background-color: red;
+    background-color:#dc2626;
 `;
 const Logo = styled(Link)`
     color:#fff;
@@ -32,7 +32,7 @@ const StyledNav = styled.nav`
     left: 0;
     right: 0;
     padding: 70px 20px 20px;
-    background-color: red;
+    background-color: #dc2626;
     @media screen and (min-width: 768px) {
         display: flex;
         position: static;
