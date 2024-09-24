@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
     body{
+    background:#eee;
       padding: 0;
       margin:0;
       .poppins-regular {

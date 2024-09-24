@@ -1,5 +1,7 @@
+import Button from "./Button";
 import Center from "./Center";
-import styled from "styled-components"
+import styled from "styled-components";
+
 
 const Bg = styled.div`
     background-color: #dc2626;
@@ -14,7 +16,7 @@ const Title = styled.h1`
 `;
 
 const Desc = styled.p`
-    color: #aaa;
+    color: white;
     font-size: .8rem;
 `;
 
@@ -30,37 +32,37 @@ const ColumnsWrapper = styled.div`
     }
 `;
 
+const ButtonWrapper = styled.div`
+    display: flex;
+    gap: 5px;
+`;
+
 const Column = styled.div`
     display: flex;
     align-items: center;
 `;
-export default function Featured() {
+export default function Featured({ product }) {
     return (
         <Bg>
             <Center>
                 <ColumnsWrapper>
                     <Column>
                         <div>
-                            <Title>¡Bienvenidos a Security Group!</Title>
-                            <Desc>En Security Group, nos dedicamos a ofrecer soluciones 
-                                integrales de seguridad para establecimientos, empresas, 
-                                y hogares. Sabemos lo importante que es proteger lo que 
-                                más te importa, por eso ponemos a tu disposición la mejor 
-                                tecnología en sistemas de seguridad, cámaras de vigilancia, 
-                                alarmas, controles de acceso y mucho más.</Desc>
-                            <Desc>Nuestra misión es garantizar tu tranquilidad con productos 
-                                confiables y un servicio de calidad que se adapta a tus 
-                                necesidades. Navega por nuestro catálogo y descubre las 
-                                mejores opciones para proteger tus espacios.</Desc>
-                            <h5>¡En Security Group, tu seguridad es nuestra prioridad!</h5>
+                            <Title>{product.title}</Title>
+                            <Desc>{product.description}</Desc>
+                            <ButtonWrapper>
+                                <button outline white size="l">Read more </button>
+                                <button primary size="l">Add cart </button>
+                            </ButtonWrapper>
+                            
                         </div>
                     </Column>
-
-                    <div>
-                        <img src="https://security-ecommerce.s3.amazonaws.com/1727125674177.webp" />
-                    </div>
+                    <Column>
+                        <img src="https://security-ecommerce.s3.amazonaws.com/1727116320679.png" alt="" />
+                    </Column>
                 </ColumnsWrapper>
             </Center>
+
         </Bg>
     );
 }
