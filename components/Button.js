@@ -22,14 +22,14 @@ const ButtonStyle = css`
         width: 100%;
     `}
     ${(props) =>
-        props.white &&
+        props.red &&
         !props.outline &&
         css`
-        background-color: #fff;
-        color: #000;
+        background-color: #dc2626;
+        color: white;
     `}
     ${(props) =>
-        props.white &&
+        props.red &&
         props.outline &&
         css`
         background-color: transparent;

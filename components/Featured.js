@@ -52,7 +52,9 @@ export default function Featured({ product }) {
                             <Desc>{product.description}</Desc>
                             <ButtonWrapper>
                                 <button outline white size="l">Read more </button>
-                                <button primary size="l">Add cart </button>
+                                <button primary size="l">
+                                    Add cart 
+                                </button>
                             </ButtonWrapper>
                             
                         </div>
