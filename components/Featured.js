@@ -1,6 +1,8 @@
 import Button from "./Button";
 import Center from "./Center";
 import styled from "styled-components";
+import { CartContext } from "./CartContext";
+import { useContext } from "react";
 
 
 const Bg = styled.div`
@@ -13,6 +15,7 @@ const Title = styled.h1`
     margin:0;
     font-weight: normal;
     font-size:4rm;
+    text-align:center;
 `;
 
 const Desc = styled.p`
@@ -32,31 +35,39 @@ const ColumnsWrapper = styled.div`
     }
 `;
 
-const ButtonWrapper = styled.div`
-    display: flex;
-    gap: 5px;
-`;
-
 const Column = styled.div`
     display: flex;
     align-items: center;
+    text-align:justify;
+`;
+
+const Final = styled.h5`
+    color: white;
+    font-size: .8rem;
+    text-align:center;
 `;
 export default function Featured({ product }) {
+    
+    const {addProduct} = useContext(CartContext);
+    function addFeaturedTocart(){
+        addProduct(product._id);
+    }
+
     return (
         <Bg>
             <Center>
                 <ColumnsWrapper>
                     <Column>
                         <div>
-                            <Title>{product.title}</Title>
-                            <Desc>{product.description}</Desc>
-                            <ButtonWrapper>
-                                <button outline white size="l">Read more </button>
-                                <button primary size="l">
-                                    Add cart 
-                                </button>
-                            </ButtonWrapper>
-                            
+                            <Title>¡Bienvenidos a Security Group!</Title>
+                            <Desc>En Security Group, nos dedicamos a ofrecer soluciones integrales de seguridad
+                                para establecimientos, empresas, y hogares. Sabemos lo importante que es proteger
+                                lo que más te importa, por eso ponemos a tu disposición la mejor tecnología en
+                                sistemas de seguridad, cámaras de vigilancia, alarmas, controles de acceso y mucho más.</Desc>
+                            <Desc>Nuestra misión es garantizar tu tranquilidad con productos confiables y un servicio 
+                                de calidad que se adapta a tus necesidades. Navega por nuestro catálogo y descubre las 
+                                mejores opciones para proteger tus espacios.</Desc>
+                            <Final >¡En Security Group, tu seguridad es nuestra prioridad!</Final>
                         </div>
                     </Column>
                     <Column>

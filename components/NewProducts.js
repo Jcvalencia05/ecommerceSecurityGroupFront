@@ -10,9 +10,14 @@ const ProductsGrid = styled.div`
     padding-top: 20px;
 `;
 
+const Title = styled.h2`
+    font-size: 2rem;
+`;
+
 export default function NewProducts({ products }) {
     return (
         <Center>
+            <Title>New products</Title>
             <ProductsGrid>
                 {products?.length > 0 && products.map(product => (
                     <ProductBox {...product}/>
